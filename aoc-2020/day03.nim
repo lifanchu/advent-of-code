@@ -1,12 +1,9 @@
 import unittest, strutils, tables, sequtils
 
-
-
 proc countTreesPartOne(map: string): int =
   var pos = 0
   result = 0
   for line in map.splitLines:
-    echo line
     if line[pos] == '#':
       result.inc
     pos = (pos + 3) mod 31
