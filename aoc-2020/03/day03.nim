@@ -21,7 +21,7 @@ proc countTreesPartTwo(map: string): int =
   result = toSeq(treeCounts.values).foldl(a*b)
 
 when isMainModule:
-  const s = readFile("inputs/day03.txt").strip
+  const s = readFile("day03.txt").strip
   test "part 1":
     check countTreesPartOne(s) == 214
   test "Part 2":

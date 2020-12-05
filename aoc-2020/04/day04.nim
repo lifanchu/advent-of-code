@@ -64,7 +64,7 @@ proc cleanNewLines(strings: seq[string]): seq[string] =
     result[i] = result[i].replace('\n', ' ')
       
 when isMainModule:
-  const s = readFile("inputs/day04.txt").strip.split(sep = "\n\n").cleanNewLines
+  const s = readFile("day04.txt").strip.split(sep = "\n\n").cleanNewLines
   test "examples, part 1":
     check checkPassport("ecl:gry pid:860033327 eyr:2020 hcl:#fffffd byr:1937 iyr:2017 cid:147 hgt:183cm", true) == true
     check checkPassport("iyr:2013 ecl:amb cid:350 eyr:2023 pid:028048884 hcl:#cfa07d byr:1929", true) == false

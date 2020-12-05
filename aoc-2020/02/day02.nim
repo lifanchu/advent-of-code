@@ -22,7 +22,7 @@ proc checkPasswordsPart2(f: string): int =
 
 when isMainModule:
 
-  const f = readFile("inputs/day02.txt")
+  const f = readFile("day02.txt")
 
   test "with full input":
     check checkPasswordsPart1(f) == 556

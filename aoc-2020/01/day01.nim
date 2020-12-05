@@ -19,7 +19,7 @@ proc fixExpensesPart2(nums: seq[int]): int =
 
 when isMainModule:
 
-  const s = readFile("inputs/day01.txt").strip
+  const s = readFile("day01.txt").strip
   let nums = stringToInts(s)
 
   let part1 = fixExpenses(nums)

@@ -11,12 +11,7 @@ U| |\  |u      | |      | |  | |
 
 ```
 
-This is a collection of solutions to Advent of Code exercises coded in Nim. There are solutions for multiple years.
-
-Each year has its own directory. Each year's directory is organized in the following fashion:
-
-- The base directory has `.nim` solution files (titled `day01.nim`, `day02.nim`, etc.)  
-- The `inputs` contains the inputs I received in text files (`day01.txt`, etc.). The solution files read the input from these.
+This is a collection of solutions to Advent of Code exercises coded in Nim. There are solutions for multiple years. Some days have two solution files, these correspond to my solutions before and after 'feedback' from looking at other peoples' solutions.
 
 ## Template for tests
 
@@ -28,7 +23,7 @@ when isMainModule:
     discard
   test "check part 2 examples":
     discard
-  test "check part 2 solution":
+  test "check part 1 solution":
     discard
   test "check part 2 solution":
     discard

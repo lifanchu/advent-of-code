@@ -1,6 +1,6 @@
 import tables, strutils
 
-let s = readFile("./inputs/day01.txt").strip
+let s = readFile("day01.txt").strip
 
 type
   Solution = tuple
