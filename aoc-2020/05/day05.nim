@@ -44,3 +44,4 @@ when isMainModule:
     check seatNums.sorted[^1] == 904
   test "check part 2 solution":
     check findMySeat(seatNums) == 669
+
