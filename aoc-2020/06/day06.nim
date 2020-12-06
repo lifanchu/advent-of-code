@@ -1,21 +1,22 @@
-import strutils, sequtils, unittest
+import strutils, unittest
 
 const groups = staticRead("day06.txt").strip.split("\n\n")
 
-proc main[T](groups: openArray[T]): (int, int) =
+proc main(groups: openArray[string]): (int, int) =
   for group in groups:
-    var unique: set[char]
-    var unique2 = {'a'..'z'}
+    var singleReply: set[char]
+    var allReply = {'a'..'z'}
     for ans in group.split('\n'):
       var chars: set[char]
       for c in ans: 
         chars.incl(c)
-      unique = unique + chars
-      unique2 = unique2 * chars
-    result[0].inc(unique.len)
-    result[1].inc(unique2.len)
+      singleReply = singleReply + chars
+      allReply = allReply * chars
+    result[0].inc(singleReply.len)
+    result[1].inc(allReply.len)
 
+let (p1, p2) = main(groups)
 test "part1":
-  check main(groups)[0]==6534 
+  check p1 == 6534 
 test "part2": 
-  check main(groups)[1]==3402
+  check p2 == 3402
