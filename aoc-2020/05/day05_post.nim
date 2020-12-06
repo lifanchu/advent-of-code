@@ -21,3 +21,4 @@ when isMainModule:
   test "check part 2 solution":
     check findMySeat(seatNums) == 669
 
+

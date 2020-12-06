@@ -1,13 +1,15 @@
-import strutils, sequtils, sets, unittest
+import strutils, sequtils, unittest
 
 const groups = staticRead("day06.txt").strip.split("\n\n")
 
 proc main[T](groups: openArray[T]): (int, int) =
   for group in groups:
-    var unique = initHashSet[char]()
-    var unique2 = {'a'..'z'}.toSeq.toHashSet
+    var unique: set[char]
+    var unique2 = {'a'..'z'}
     for ans in group.split('\n'):
-      let chars = ans.toHashSet
+      var chars: set[char]
+      for c in ans: 
+        chars.incl(c)
       unique = unique + chars
       unique2 = unique2 * chars
     result[0].inc(unique.len)
