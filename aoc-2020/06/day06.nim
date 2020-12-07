@@ -1,6 +1,6 @@
 import strutils, unittest
 
-const groups = staticRead("day06.txt").strip.split("\n\n")
+let groups = readFile("day06.txt").strip.split("\n\n")
 
 proc main(groups: openArray[string]): (int, int) =
   for group in groups:
