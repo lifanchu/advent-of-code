@@ -4,7 +4,6 @@ type
   Bag = object
     name: string
     capacity: Table[string, int]
-    holding: CountTable[string]
 
 proc hash(b: Bag): Hash =
   !$b.name.hash
