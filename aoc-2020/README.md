@@ -1,5 +1,7 @@
 # Advent of Code 2020 solutions
 
+Does not include part two solutions from day 14 onward.
+
 Links to other solution repositories:
 
 - [Zevv](https://github.com/zevv/aoc2020)
