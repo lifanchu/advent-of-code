@@ -55,13 +55,13 @@ func findEternal(seats: seq[string]): (int, int) =
     pre = post
 
 when isMainModule:
-  benchmark "":
     const s = staticRead("day11.txt").strip.split('\n')
-    
-    let solution = findEternal(s)
-    test "part 1":
-      check solution[0] == 2303 
-    test "part 2":
-      check solution[1] == 2057 
+      
+    benchmark "":
+      let solution = findEternal(s)
+      test "part 1":
+        check solution[0] == 2303 
+      test "part 2":
+        check solution[1] == 2057 
     
     
