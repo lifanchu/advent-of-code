@@ -1,6 +1,6 @@
 # Advent of Code 2020 solutions
 
-Does not include part two solutions from day 14 onward.
+Missing part two solutions for: Day 14
 
 Links to other solution repositories:
 
