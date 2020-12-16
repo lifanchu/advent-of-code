@@ -1,4 +1,4 @@
-import sequtils, strutils, tables, hashes, strscans, sets, unittest
+import sequtils, strutils, tables, strscans, sets, unittest, sugar
 
 type
   Range = tuple
@@ -33,6 +33,7 @@ proc findValidRules(rules; values: seq[int]): HashSet[string] =
 proc findFields(rules, tickets): seq[string] =
   var possible = initTable[int, HashSet[string]]()
 
+  # iterate through cols and get possible fields
   for i in 0..tickets[0].high:
     let currentCol = block:
       var tempCol = newSeq[int](tickets.len)
@@ -46,9 +47,15 @@ proc findFields(rules, tickets): seq[string] =
     for index in possible.keys:
       let fields = possible[index]
       if fields.len == i:
-        let remaining = fields - covered
-        covered.incl remaining
-        result[index] = remaining.toSeq[0]
+        let unique = (fields - covered).toSeq[0]
+        covered.incl unique
+        result[index] = unique
+        
+proc solveTwo(fields: openArray[string], myTicket: seq[int]): int = 
+    result = 1
+    for i, field in fields:
+      if field.split(' ')[0] == "departure":
+        result *= myTicket[i]
 
 proc parse(f: string): (Table[string, array[2, Range]], seq[int], seq[seq[int]]) =
 
@@ -80,27 +87,16 @@ when isMainModule:
 
   let (rules, myTicket, tickets) = parse("day16.txt")  
   let (solutionOne, invalidIndices) = findInvalid(rules, tickets)
-
-  let validTickets = block:
-    var ticks: seq[seq[int]]
+    
+  let validTickets = collect(newSeq):
     for i, t in tickets:
-      if i notin invalidIndices:
-        ticks.add tickets[i]
-    ticks &= myTicket
-    ticks
+      if i notin invalidIndices: t
       
   let correctFields = findFields(rules, validTickets)
-
-  let solutionTwo = block:
-    var total = 1
-    for i, field in correctFields:
-      if field.split(' ')[0] == "departure":
-        total *= myTicket[i]
-    total
 
   test "part 1 solution":
     check solutionOne == 26026
   test "part 2 solution":
-    check solutionTwo == 1305243193339
+    check solveTwo(correctFields, myTicket) == 1305243193339
 
     
