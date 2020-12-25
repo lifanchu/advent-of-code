@@ -1,4 +1,4 @@
-# Advent of Code nim solutions
+# Advent of Code Solutions in Nim
 
 ```
   _   _                  __  __   
@@ -11,20 +11,4 @@ U| |\  |u      | |      | |  | |
 
 ```
 
-This is a collection of solutions to Advent of Code exercises coded in Nim. There are solutions for multiple years. Some days have two solution files, these correspond to my solutions before and after 'feedback' from looking at other peoples' solutions.
-
-## Template for tests
-
-```
-import unittest
-
-when isMainModule:
-  test "check part 1 examples":
-    discard
-  test "check part 2 examples":
-    discard
-  test "check part 1 solution":
-    discard
-  test "check part 2 solution":
-    discard
-```
+This is a collection of solutions to Advent of Code exercises coded in Nim. For now, the solutions are only for 2020.  
