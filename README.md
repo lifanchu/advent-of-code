@@ -1,14 +1,6 @@
-# Advent of Code Solutions in Nim
+# Advent of Code 
 
-```
-  _   _                  __  __   
- | \ |"|       ___     U|' \/ '|u 
-<|  \| |>     |_"_|    \| |\/| |/ 
-U| |\  |u      | |      | |  | |  
- |_| \_|     U/| |\u    |_|  |_|  
- ||   \\,-.-,_|___|_,-.<<,-,,-.   
- (_")  (_/ \_)-' '-(_/  (./  \.)  
+This is a collection of solutions to Advent of Code for multiple years.  The years are listed belowd in the order they were done.
 
-```
-
-This is a collection of solutions to Advent of Code exercises coded in Nim. For now, the solutions are only for 2020.  
+1. 2020 - Nim
+2. 2019 - Wolfram Language
