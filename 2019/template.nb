@@ -1,0 +1,58 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      1355,         48]
+NotebookOptionsPosition[      1003,         34]
+NotebookOutlinePosition[      1407,         50]
+CellTagsIndexPosition[      1364,         47]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"input", " ", "=", "  ", 
+  RowBox[{"Import", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", " ", 
+       "\"\<input.txt\>\""}], "}"}], "]"}], ",", " ", "\"\<List\>\""}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.8180320149528413`*^9, 
+  3.8180320196648407`*^9}},ExpressionUUID->"979caa80-d6b0-4883-92e1-\
+0a0ad7df26f8"]
+},
+WindowSize->{989, 838},
+WindowMargins->{{Automatic, 354}, {-84, Automatic}},
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d4a3a9bd-d193-4674-a086-6f83e33330fa"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[561, 20, 438, 12, 28, "Input",ExpressionUUID->"979caa80-d6b0-4883-92e1-0a0ad7df26f8"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
